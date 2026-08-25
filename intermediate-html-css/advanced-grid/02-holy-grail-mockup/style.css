@@ -4,7 +4,10 @@
 }
 
 .container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
   text-align: center;
+  gap: 4px;
 }
 
 .container div {
@@ -88,4 +91,55 @@
 .footer p {
   font-size: 13px;
   font-weight: normal;
+}
+
+.header {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.logo {
+  justify-self: start;
+}
+
+.menu {
+  align-self: center;
+  justify-content: end;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 15px;
+}
+
+.article .card {
+  height: 200px;
+}
+
+.sidebar {
+  display: grid;
+  grid-row: 2 / 4;
+  gap: 50px;
+}
+
+.sidebar div{
+  display: grid;
+  place-items: center;
+}
+
+.footer {
+  grid-column: 1 / -1;
 }
